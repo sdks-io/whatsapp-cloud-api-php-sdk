@@ -1,0 +1,53 @@
+{
+    "name": "sdksio/whatsapp-cloud-api-sdk",
+    "description": "Use cloud-hosted version of the WhatsApp Business API to send and receive messages",
+    "type": "library",
+    "keywords": [
+        "whatsapp",
+        "messages",
+        "api",
+        "chat-sdk",
+        "whatsapp-api",
+        "whatsapp-sdk"
+    ],
+    "homepage": "https://www.apimatic.io/apidocs/whatsapp-api/v/1_0#/php",
+    "license": [
+        "MIT"
+    ],
+    "authors": [
+        {
+            "name": "developer-sdksio",
+            "email": "developer+sdksio@apimatic.io"
+        }
+    ],
+    "support": {},
+    "require": {
+        "php": "^7.2 || ^8.0",
+        "ext-json": "*",
+        "apimatic/unirest-php": "^4.0.0",
+        "apimatic/core-interfaces": "~0.1.0",
+        "apimatic/core": "~0.3.0"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.5",
+        "phan/phan": "5.4.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "WhatsAppCloudAPILib\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "WhatsAppCloudAPILib\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "lint-src": "phpcs --standard=phpcs-ruleset.xml src/",
+        "lint-src-fix": "phpcbf --standard=phpcs-ruleset.xml src/",
+        "analyze": "phan --allow-polyfill-parser",
+        "lint": [
+            "@lint-src"
+        ]
+    }
+}
